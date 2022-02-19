@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApiTechnicalChallenge</name>
+    </assembly>
+    <members>
+        <member name="M:WebApiTechnicalChallenge.Controllers.NumberController.GetDividers(Application.Commands.GetDividersCommand.Contract)">
+            <summary>
+            Api retorna os divisores do número informado.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiTechnicalChallenge.Controllers.NumberController.GetPrimeDividers(Application.Commands.GetPrimeDividersCommand.Contract)">
+            <summary>
+            Api retorna os números primos entre os divisores do número informado.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiTechnicalChallenge.Controllers.NumberController.GetDividersPrimeDividers(Application.Commands.GetDividersAndPrimeDividersCommand.Contract)">
+            <summary>
+            Api retorna os divisores do número e os números primos entre os divisores do número informado.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
