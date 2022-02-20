@@ -34,7 +34,7 @@ namespace UnitTest.Application.Command
 
         [Theory(DisplayName = "GetDividersCommand Test Fail")]
         [MemberData(nameof(DataDividersFail))]
-        public void GetDividersCommandFail(int inputNumber, List<int> dividers)
+        public void GetDividersCommandFail(int inputNumber)
         {
             ///Arrange
             GetDividersCommand.Contract contract = new GetDividersCommand.Contract()
@@ -80,13 +80,13 @@ namespace UnitTest.Application.Command
 
         public static IEnumerable<object[]> DataDividersFail => new List<object[]>
         {
-            new object[] { 0, new List<int> { 1, 3, 5, 9, 15, 45 } }
+            new object[] { 0}
         ,
-            new object[] { -9, new List<int> { 1, 3, 9 } }
+            new object[] { -9}
         ,
-            new object[] { -12, new List<int> { 1, 2, 3, 4, 6, 12 } }
+            new object[] { -12}
         ,
-            new object[] { -24, new List<int> { 1, 2, 3, 4, 6, 8, 12, 24 } }
+            new object[] { -24}
         };
     }
 }

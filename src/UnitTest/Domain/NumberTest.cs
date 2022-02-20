@@ -24,7 +24,7 @@ namespace UnitTest.Domain
 
         [Theory(DisplayName = "GetDividers Test Fail")]
         [MemberData(nameof(DataDividersFail))]
-        public void GetDividersFail(int inputNumber, List<int> dividers)
+        public void GetDividersFail(int inputNumber)
         {
             ///Arrange
 
@@ -52,7 +52,7 @@ namespace UnitTest.Domain
 
         [Theory(DisplayName = "GetPrimeDividers Test Fail")]
         [MemberData(nameof(DataPrimeDividersFail))]
-        public void GetPrimeDividersFail(int inputNumber, List<int> dividers)
+        public void GetPrimeDividersFail(int inputNumber)
         {
             ///Arrange
 
@@ -93,24 +93,24 @@ namespace UnitTest.Domain
 
         public static IEnumerable<object[]> DataDividersFail => new List<object[]>
         {
-            new object[] { 0, new List<int> { 1, 3, 5, 9, 15, 45 } }
+            new object[] { 0 }
         ,
-            new object[] { -9, new List<int> { 1, 3, 9 } }
+            new object[] { -9}
         ,
-            new object[] { -12, new List<int> { 1, 2, 3, 4, 6, 12 } }
+            new object[] { -12}
         ,
-            new object[] { -24, new List<int> { 1, 2, 3, 4, 6, 8, 12, 24 } }
+            new object[] { -24}
         };
 
         public static IEnumerable<object[]> DataPrimeDividersFail => new List<object[]>
         {
-            new object[] { 0, new List<int> { 1, 3, 5 } }
+            new object[] { 0}
         ,
-            new object[] { -9, new List<int> { 1, 3 } }
+            new object[] { -9}
         ,
-            new object[] { -12, new List<int> { 1, 2, 3 } }
+            new object[] { -12}
         ,
-            new object[] { -24, new List<int> { 1, 2, 3 } }
+            new object[] { -24}
         };
     }
 }
